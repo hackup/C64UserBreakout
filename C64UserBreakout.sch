@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "C64UserBreakout"
+Date "2020-08-17"
+Rev "1"
+Comp "hackup.net"
+Comment1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment2 "This work is licensed under a"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -291,57 +291,50 @@ $Comp
 L Connector_Generic:Conn_02x02_Odd_Even J1
 U 1 1 5F3B64A1
 P 2150 2450
-F 0 "J1" H 2200 2667 50  0000 C CNN
-F 1 "Power" H 2200 2576 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 2150 2450 50  0001 C CNN
+F 0 "J1" H 2200 2400 50  0000 C CNN
+F 1 "Power1" H 2200 2550 50  0000 C CNN
+F 2 "C64UserBreakout:PinHeader_2x02_Power" H 2150 2450 50  0001 C CNN
 F 3 "~" H 2150 2450 50  0001 C CNN
 	1    2150 2450
 	1    0    0    -1  
 $EndComp
-Connection ~ 1950 3000
-Wire Wire Line
-	1950 2900 1950 3000
 $Comp
 L power:GND #PWR0103
 U 1 1 5F3B73C3
-P 1950 3700
-F 0 "#PWR0103" H 1950 3450 50  0001 C CNN
-F 1 "GND" H 1955 3527 50  0000 C CNN
-F 2 "" H 1950 3700 50  0001 C CNN
-F 3 "" H 1950 3700 50  0001 C CNN
-	1    1950 3700
+P 1950 3300
+F 0 "#PWR0103" H 1950 3050 50  0001 C CNN
+F 1 "GND" H 1955 3127 50  0000 C CNN
+F 2 "" H 1950 3300 50  0001 C CNN
+F 3 "" H 1950 3300 50  0001 C CNN
+	1    1950 3300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J2
+L Connector_Generic:Conn_02x02_Odd_Even J2
 U 1 1 5F3B7083
-P 2150 2900
-F 0 "J2" H 2230 2892 50  0000 L CNN
-F 1 "GND" H 2230 2801 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2150 2900 50  0001 C CNN
-F 3 "~" H 2150 2900 50  0001 C CNN
-	1    2150 2900
+P 2650 2450
+F 0 "J2" H 2650 2400 50  0000 L CNN
+F 1 "Power2" H 2550 2550 50  0000 L CNN
+F 2 "C64UserBreakout:PinHeader_2x02_Power" H 2650 2450 50  0001 C CNN
+F 3 "~" H 2650 2450 50  0001 C CNN
+	1    2650 2450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1950 2900 1950 2700
-Connection ~ 1950 2900
 Wire Wire Line
 	2450 2550 2450 2700
 Wire Wire Line
 	2450 2700 1950 2700
-Connection ~ 1950 2700
 Wire Wire Line
 	1950 2700 1950 2550
 $Comp
 L power:+5V #PWR0104
 U 1 1 5F3BD466
-P 2450 2150
-F 0 "#PWR0104" H 2450 2000 50  0001 C CNN
-F 1 "+5V" H 2465 2323 50  0000 C CNN
-F 2 "" H 2450 2150 50  0001 C CNN
-F 3 "" H 2450 2150 50  0001 C CNN
-	1    2450 2150
+P 2950 2150
+F 0 "#PWR0104" H 2950 2000 50  0001 C CNN
+F 1 "+5V" H 2965 2323 50  0000 C CNN
+F 2 "" H 2950 2150 50  0001 C CNN
+F 3 "" H 2950 2150 50  0001 C CNN
+	1    2950 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -350,27 +343,23 @@ Wire Wire Line
 	1950 2450 1950 2150
 Wire Wire Line
 	1950 2150 2450 2150
-Connection ~ 2450 2150
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5F3C0D2B
-P 2150 3550
-F 0 "SW1" H 2150 3835 50  0000 C CNN
-F 1 "Reset" H 2150 3744 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 2150 3750 50  0001 C CNN
-F 3 "~" H 2150 3750 50  0001 C CNN
-	1    2150 3550
+P 2150 3150
+F 0 "SW1" H 2150 3435 50  0000 C CNN
+F 1 "Reset" H 2150 3344 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 2150 3350 50  0001 C CNN
+F 3 "~" H 2150 3350 50  0001 C CNN
+	1    2150 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1950 3000 1950 3550
-Connection ~ 1950 3550
-Wire Wire Line
-	1950 3550 1950 3700
-Text GLabel 2450 3550 2    50   UnSpc ~ 0
+	1950 3150 1950 3300
+Text GLabel 2450 3150 2    50   UnSpc ~ 0
 RST
 Wire Wire Line
-	2350 3550 2450 3550
+	2350 3150 2450 3150
 $Comp
 L Connector:Conn_01x21_Female J4
 U 1 1 5F3A611B
@@ -527,12 +516,6 @@ Wire Wire Line
 	4250 2000 4400 2000
 Wire Wire Line
 	4400 2000 4400 1700
-Wire Bus Line
-	5500 2200 5500 4150
-Wire Bus Line
-	7400 2100 7400 4150
-Wire Bus Line
-	4650 2200 4650 4150
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5F3C409A
@@ -544,4 +527,27 @@ F 3 "~" H 10400 5900 50  0001 C CNN
 	1    10400 5900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2950 2700 2950 2550
+Wire Wire Line
+	2950 2150 2950 2450
+Connection ~ 2450 2450
+Connection ~ 2450 2550
+Wire Wire Line
+	2450 2150 2950 2150
+Connection ~ 2450 2150
+Connection ~ 2950 2150
+Wire Wire Line
+	2450 2700 2950 2700
+Connection ~ 2450 2700
+Wire Wire Line
+	1950 2700 1950 3150
+Connection ~ 1950 2700
+Connection ~ 1950 3150
+Wire Bus Line
+	5500 2200 5500 4150
+Wire Bus Line
+	7400 2100 7400 4150
+Wire Bus Line
+	4650 2200 4650 4150
 $EndSCHEMATC
